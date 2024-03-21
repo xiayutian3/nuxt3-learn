@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+// 动态设置seo
 useSeoMeta({
   title: '我的神奇网站',
   ogTitle: '我的神奇网站',
@@ -13,6 +14,10 @@ useSeoMeta({
   ogImage: 'https://example.com/image.png',
   twitterCard: 'summary_large_image',
 })
+
+//发请求
+const data = await useFetch('/api/channel', { method: 'GET'})
+
 </script>
 <style lang="scss">
 .wrapper {
