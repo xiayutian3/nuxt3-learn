@@ -1,10 +1,17 @@
 <template>
+  <!-- 公共头部 -->
+  <AppHeader/>
+  
   <div class="wrapper">首页</div>
   <van-button type="primary">button</van-button>
   <VanButton type="success">button</VanButton>
 </template>
 
 <script setup lang="ts">
+import type { VideoItem } from '@/types/video'
+// 显示的列表
+const list = ref<VideoItem[]>([])
+
 // 动态设置seo
 useSeoMeta({
   title: '我的神奇网站',
